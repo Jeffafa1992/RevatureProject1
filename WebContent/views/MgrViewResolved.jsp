@@ -14,7 +14,8 @@
 <body>
 <a href="ManagerHomePage" >Go Back</a>
 <p>View resolved request and see which manager resolved it</p>
-	<table border="1">
+	<div class="container">
+	<table class="table table-hover">
 		<tr>
 			<th>First Name</th>
 			<th>Last Name</th>
@@ -32,5 +33,6 @@
 			</tr>
 		</c:forEach>
 	</table>
+	</div>
 </body>
 </html>

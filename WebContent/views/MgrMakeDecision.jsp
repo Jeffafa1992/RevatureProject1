@@ -14,7 +14,8 @@
 <body>
 	<a href="ManagerHomePage" >Go Back</a>
 	<p>Approve/Deny Reimbursements</p>
-	<table border="1">
+	<div class="container">
+	<table class="table table-hover">
 		<tr>
 			<th>Request Id</th>
 			<th>Employee Id</th>
@@ -32,6 +33,7 @@
 			</tr>
 		</c:forEach>
 	</table>
+	</div>
 	<form action="MgrFinalDecision" method="POST">
 	    <p>Enter Request ID</p>
 	    <input type="text" name="requestId">

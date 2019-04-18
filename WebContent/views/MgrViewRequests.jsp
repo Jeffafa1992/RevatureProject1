@@ -13,7 +13,8 @@
 </head>
 <body>
 <a href="ManagerHomePage" >Go Back</a>
-	<table border="1">
+	<div class="container">
+	<table class="table table-hover">
 		<tr>
 			<th>Id</th>
 			<th>Employee Id</th>
@@ -33,6 +34,7 @@
 			</tr>
 		</c:forEach>
 	</table>
+	</div>
 
 </body>
 </html>
