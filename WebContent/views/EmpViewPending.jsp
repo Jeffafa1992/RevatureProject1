@@ -11,7 +11,7 @@
 <a href="EmployeeHomePage" >Go Back</a>
 	<table border="1">
 		<tr>
-			<th>Id</th>
+			<th>Request Id</th>
 			<th>Employee Id</th>
 			<th>RequestAmount</th>
 			<th>Expense Date</th>

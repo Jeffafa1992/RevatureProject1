@@ -10,9 +10,9 @@
 <a href="EmployeeHomePage" >Go Back</a>
 <p>Enter the information you would like to change</p>
 <form action="EmpPerformUpdate" method="POST"> 
-	<label>First Name: <input type="text" value="${emp.firstName}" name="fname"></label>
-	<label>Last Name: <input type="text" value="${emp.lastName}" name="lname"></label>
-	<label>Email: <input type="text" value="${emp.email}" name="email"></label>
+	<label>First Name: <input type="text" value="${emp.firstName}" name="fname"></label><br>
+	<label>Last Name: <input type="text" value="${emp.lastName}" name="lname"></label><br>
+	<label>Email: <input type="text" value="${emp.email}" name="email"></label><br>
 	<input type="submit" value="Update">
 </form>
 

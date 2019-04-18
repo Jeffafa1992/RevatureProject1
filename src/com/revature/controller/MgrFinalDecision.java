@@ -1,4 +1,4 @@
-package com.revature.login;
+package com.revature.controller;
 
 import java.io.IOException;
 
@@ -8,22 +8,25 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.revature.dao.EmployeeDAOImpl;
-import com.revature.entity.Employee;
+import com.revature.dao.ManagerDAO;
+import com.revature.dao.ManagerDAOImpl;
 
-public class EmployeeHomePage extends HttpServlet {
+public class MgrFinalDecision extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-    public EmployeeHomePage() {
+	ManagerDAO myDao = null;
+    public MgrFinalDecision() {
+        myDao = new ManagerDAOImpl(); 		
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/EmpHome.jsp");
-		dispatcher.forward(request,response);		
+		int id = Integer.parseInt(request.getParameter("requestId"));
+		String decision = request.getParameter("mydecision");
+		myDao.makeDecision(id, decision);
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/MgrHome.jsp");
+		dispatcher.forward(request,response);
 	}
-
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 		doGet(request, response);
 	}
 

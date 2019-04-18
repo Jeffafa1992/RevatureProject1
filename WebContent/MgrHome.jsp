@@ -9,7 +9,7 @@
 <body>
 	<h1>Hello ${man.firstName}</h1>
 		<p>-A Manager can logout</p>
-		<a href="index.html">Logout</a>
+		<a href="LogoutServlet">Logout</a>
 		
 		<p>-A Manager can approve/deny pending reimbursement requests</p>
 		<a href="MgrMakeDecision">Approve/Deny Requests</a>
@@ -24,7 +24,11 @@
 		<a href="MgrViewEmployees">View All Employees</a>
 		
 		<p>-A Manager can view reimbursement requests from a single Employee</p>
-		<a href="MgrViewRequestForm">View Reimbursement Requests</a>
+		<p>Enter the employees ID number:</p>
+        <form action="MgrViewRequests" method="POST">
+	        <input type="text" name="empID">
+	        <input type="submit" value="Enter">
+        </form>
 
 </body>
 </html>

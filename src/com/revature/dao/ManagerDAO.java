@@ -8,8 +8,9 @@ import com.revature.entity.Request;
 
 public interface ManagerDAO {
 	//A Manager can approve/deny pending reimbursement requests
-	void makeDecision();
+	void makeDecision(int id,String decision);
 	
+	List<Request> viewPending(int id);
 	//A Manager can view all pending requests from all employees
 	List<Request> viewPending();
 	

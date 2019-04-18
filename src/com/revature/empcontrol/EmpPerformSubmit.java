@@ -19,10 +19,15 @@ public class EmpPerformSubmit extends HttpServlet {
         empDao = new EmployeeDAOImpl();
     }
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		Employee myEmp = (Employee) request.getSession().getAttribute("emp");
-		int empid = myEmp.getId();
+		
+		int empid = myEmp.getId();		
+		int managerid = Integer.parseInt(request.getParameter("manID"));
 		int reqamt = Integer.parseInt(request.getParameter("amount"));
-		empDao.submitRequest(empid, reqamt);
+		
+		empDao.submitRequest(empid,managerid,reqamt);
+		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/EmpHome.jsp");
 		dispatcher.forward(request,response);
 	}

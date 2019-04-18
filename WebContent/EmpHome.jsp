@@ -10,7 +10,7 @@
 	<h1>Hello ${emp.firstName}</h1>
 
 		<p>-An Employee can logout</p>
-		<a href="index.html">Logout</a>
+		<a href="LogoutServlet">Logout</a>
 		
 		<p>-An Employee can submit a reimbursement request</p>
 		<a href="EmpSubmitRequest">Submit Request</a>

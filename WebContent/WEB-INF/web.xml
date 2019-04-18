@@ -169,4 +169,24 @@
     <servlet-name>EmpPerformSubmit</servlet-name>
     <url-pattern>/EmpPerformSubmit</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>MgrFinalDecision</display-name>
+    <servlet-name>MgrFinalDecision</servlet-name>
+    <servlet-class>com.revature.controller.MgrFinalDecision</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MgrFinalDecision</servlet-name>
+    <url-pattern>/MgrFinalDecision</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LogoutServlet</display-name>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>com.revature.login.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/LogoutServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -1,6 +1,7 @@
 package com.revature.empcontrol;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,6 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.revature.dao.EmployeeDAO;
 import com.revature.dao.EmployeeDAOImpl;
+import com.revature.entity.Employee;
+import com.revature.entity.Request;
 
 public class EmpViewPending extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -20,6 +23,13 @@ public class EmpViewPending extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		Employee myEmp = (Employee) request.getSession().getAttribute("emp");
+		int id = myEmp.getId();
+		
+		List<Request> viewPending = EmployeeDAOImpl.viewPending(id);
+		request.getSession().setAttribute("viewPending", viewPending);
+		
+		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/views/EmpViewPending.jsp");
 		dispatcher.forward(request,response);
 	}

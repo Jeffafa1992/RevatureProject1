@@ -3,6 +3,7 @@ package com.revature.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
@@ -62,8 +63,48 @@ public class ManagerDAOImpl implements ManagerDAO {
 	
 	//A Manager can approve/deny pending reimbursement requests
 	@Override
-	public void makeDecision() {
+	public void makeDecision(int id,String decision) {
+		try {
+			String sql = "update requests set status = 'resolved', decision='"+decision+"' where request_id="+id;  
+			Connection connection = DBConnectionUtil.getConnection();
+			Statement statement = connection.createStatement();		
+			ResultSet resultSet = statement.executeQuery(sql);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 
+	}
+	
+	//view requests from single manager
+	public List<Request> viewPending(int id){
+		List<Request> list = null;
+		Request request = null;
+				
+		try {
+			list = new ArrayList<Request>();
+
+			String sql = "select * from requests where status = 'pending' and manager_id ="+id;
+			connection = DBConnectionUtil.getConnection();
+			statement = connection.createStatement();
+			resultSet = statement.executeQuery(sql);
+
+			while(resultSet.next()) {
+				request = new Request();
+				request.setId(resultSet.getInt("request_id"));						
+				request.setEmpId(resultSet.getInt("employee_id"));
+				request.setMgrId(resultSet.getInt("manager_id"));
+				request.setRequestAmount(resultSet.getInt("request_amount"));
+				request.setExpenseDate(resultSet.getString("expense_date"));
+				request.setStatus(resultSet.getString("status"));
+				request.setDecision(resultSet.getString("decision"));
+				list.add(request);
+			}
+				return list;
+			}
+			catch(Exception e) {
+				e.printStackTrace();
+			}
+		return null;
 	}
 	
 	//A Manager can view all pending requests from all employees

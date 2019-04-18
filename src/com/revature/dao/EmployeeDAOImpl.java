@@ -76,9 +76,9 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 
 	//An Employee can submit a reimbursement request
 	@Override
-	public void submitRequest(int empid,int reqamt) {
+	public void submitRequest(int empid,int manid, int reqamt) {
 		int id = getRequestCount()+1;
-		int manid = (int) (Math.random()*((10-1)+1))+1;
+		//int manid = (int) (Math.random()*((10-1)+1))+1;
 		String expdate = "19-APR-19";
 		String status = "pending";
 		String decision = null;
@@ -149,7 +149,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 				request.setEmpId(resultSet.getInt("employee_id"));
 				request.setMgrId(resultSet.getInt("manager_id"));
 				request.setRequestAmount(resultSet.getInt("request_amount"));
-				request.setExpenseDate("expense_date");
+				request.setExpenseDate(resultSet.getString("expense_date"));
 				request.setStatus(resultSet.getString("status"));
 				request.setDecision(resultSet.getString("decision"));
 				list.add(request);
@@ -163,7 +163,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 	}
 
 	//An Employee can view their information
-	public static Employee viewInformation(int id) {
+	public Employee viewInformation(int id) {
 		Employee employee = new Employee();  
 		try{  
 

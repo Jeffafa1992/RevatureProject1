@@ -31,14 +31,8 @@ public class LoginServlet extends HttpServlet {
 		    String p = request.getParameter("password");  
 		          
 		    if(EmployeeDAOImpl.validate(n, p)){  
-		    	Employee emp = EmployeeDAOImpl.createUser(n, p);
-		    	List<Request> viewPending = EmployeeDAOImpl.viewPending(emp.getId());
-		    	List<Request> viewResolved = EmployeeDAOImpl.viewResolved(emp.getId());
-		    	
-		    	request.getSession().setAttribute("emp", emp);		    	
-		    	request.getSession().setAttribute("viewPending", viewPending);
-		    	request.getSession().setAttribute("viewResolved", viewResolved);
-		    	
+		    	Employee emp = EmployeeDAOImpl.createUser(n, p);	    	
+		    	request.getSession().setAttribute("emp", emp);	
 		        RequestDispatcher rd = request.getRequestDispatcher("EmployeeHomePage");  	       
 		        rd.forward(request,response);  
 		    }  

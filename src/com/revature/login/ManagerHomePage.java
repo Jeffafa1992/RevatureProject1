@@ -15,9 +15,7 @@ public class ManagerHomePage extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//get request dispatcher
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/MgrHome.jsp");
-		//forward request and response
 		dispatcher.forward(request,response);
 	}
 

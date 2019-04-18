@@ -11,11 +11,12 @@
 <a href="EmployeeHomePage" >Go Back</a>
 	<table border="1">
 		<tr>
-			<th>Id</th>
+			<th>Request Id</th>
 			<th>Employee Id</th>
 			<th>RequestAmount</th>
 			<th>Expense Date</th>
 			<th>Status</th>
+			<th>Decision</th>
 		</tr>
 		<c:forEach items="${viewResolved}" var="request">
 			<tr>
@@ -24,6 +25,7 @@
 				<td>${request.requestAmount}</td>
 				<td>${request.expenseDate}</td>
 				<td>${request.status}</td>
+				<td>${request.decision}</td>
 			</tr>
 		</c:forEach>
 	</table>

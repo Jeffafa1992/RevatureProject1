@@ -29,6 +29,8 @@ public class EmpPerformUpdate extends HttpServlet {
 		String email = request.getParameter("email");
 		
 		empDAO.updateInformation(first, last, email, id);
+		Employee emp = (Employee) request.getSession().getAttribute("emp");
+		request.getSession().setAttribute("emp",emp);
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/EmpHome.jsp");
 		dispatcher.forward(request,response);
