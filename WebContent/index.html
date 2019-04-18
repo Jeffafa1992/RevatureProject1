@@ -9,12 +9,29 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<h1>Welcome to Expense Reimbursement System</h1>
+	
+	<!-- 
 	<form  id="form" action="LoginServlet" method="POST">
 		<p>Enter User Name</p><input type="text" name="username"><br>
 		<p>Enter Password</p><input type="password" name="password"><br>
 		<input type="submit" value="submit">
 	</form>
+	 -->
+	 
+	<div class="container">
+	<h1>Welcome to Expense Reimbursement System</h1>
+	<form action="LoginServlet" method="POST">
+    <div class="form-group">
+        <label for="username">Enter User Name:</label>
+        <input type="text" class="form-control" name="username">
+    </div>
+    <div class="form-group">
+        <label for="password">Enter Password:</label>
+        <input type="password" class="form-control" name="password">
+    </div>
+    <input type="submit" class="btn btn-primary" value="Submit">
+    </form>
+    </div>
 	<p>Test Cases:</p>
 <p>Employee Login: vbrands0  koepOrcSkD</p>
 <p>Employee Login: bbessant1  dTXQw5y0EJ</p>
