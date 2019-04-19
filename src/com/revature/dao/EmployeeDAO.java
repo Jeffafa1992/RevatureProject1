@@ -10,10 +10,10 @@ public interface EmployeeDAO {
 	void submitRequest(int empid, int manid, int reqamt);
 	
 	//An Employee can view their pending reimbursement requests
-	//List<Request> viewPending(int id);
+	List<Request> viewPending(int id);
 	
 	//An Employee can view their resolved reimbursement requests
-	//List<Request> viewResolved(int id);
+	List<Request> viewResolved(int id);
 	
 	//An Employee can view their information
     Employee viewInformation(int id);

@@ -26,7 +26,7 @@ public class EmpViewResolved extends HttpServlet {
 		Employee myEmp = (Employee) request.getSession().getAttribute("emp");
 		int id = myEmp.getId();
 		
-		List<Request> viewResolved = EmployeeDAOImpl.viewResolved(id);
+		List<Request> viewResolved = viewDao.viewResolved(id);
 		request.getSession().setAttribute("viewResolved", viewResolved);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/views/EmpViewResolved.jsp");
 		dispatcher.forward(request,response);

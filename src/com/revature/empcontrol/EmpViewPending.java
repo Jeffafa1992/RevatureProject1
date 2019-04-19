@@ -26,8 +26,8 @@ public class EmpViewPending extends HttpServlet {
 		Employee myEmp = (Employee) request.getSession().getAttribute("emp");
 		int id = myEmp.getId();
 		
-		List<Request> viewPending = EmployeeDAOImpl.viewPending(id);
-		request.getSession().setAttribute("viewPending", viewPending);
+		List<Request> list = viewDao.viewPending(id);
+		request.getSession().setAttribute("list", list);
 		
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/views/EmpViewPending.jsp");

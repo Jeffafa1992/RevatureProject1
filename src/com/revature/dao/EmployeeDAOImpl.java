@@ -95,7 +95,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 	}
 
 	//An Employee can view their pending reimbursement requests
-	public static List<Request> viewPending(int id) {
+	public List<Request> viewPending(int id) {
 		List<Request> list = null;
 		Request request = null;
 				
@@ -128,7 +128,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 	}
 
 	//An Employee can view their resolved reimbursement requests
-	public static List<Request> viewResolved(int id) {
+	public List<Request> viewResolved(int id) {
 		List<Request> list = null;
 		Request request = null;
 				
@@ -193,7 +193,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 			String sql = "update employees set first_name = '"+firstname+"', last_name='"+lastname+"',email = '"+email+"' where employee_id="+id;  
 			Connection connection = DBConnectionUtil.getConnection();
 			Statement statement = connection.createStatement();		
-			ResultSet resultSet = statement.executeQuery(sql);
+			statement.executeUpdate(sql);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

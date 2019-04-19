@@ -23,7 +23,7 @@
 			<th>Expense Date</th>
 			<th>Status</th>
 		</tr>
-		<c:forEach items="${viewPending}" var="request">
+		<c:forEach items="${list}" var="request">
 			<tr>
 				<td>${request.id}</td>
 				<td>${request.empId}</td>
