@@ -78,10 +78,9 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 	@Override
 	public void submitRequest(int empid,int manid, int reqamt) {
 		int id = getRequestCount()+1;
-		//int manid = (int) (Math.random()*((10-1)+1))+1;
 		String expdate = "19-APR-19";
 		String status = "pending";
-		String decision = null;
+		String decision = "";
 		  
 		try {
 			String sql ="INSERT INTO requests (request_id, employee_id, manager_id, request_amount, expense_date, status, decision) " +
