@@ -19,7 +19,7 @@
 		<p>Approve or deny pending reimbursement requests</p>
 		
 		<a href="MgrViewPending">View Pending</a>
-		<p>-View pending requests from all employees</p>
+		<p>View pending requests from all employees</p>
 		
 		<a href="MgrViewResolved">View Resolved</a>
 		<p>View resolved requests and deciding manager</p>
