@@ -13,7 +13,6 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-<a href="ManagerHomePage" >Go Back</a>
 	<div class="container">
 	<table class="table table-hover">
 		<tr>
@@ -33,6 +32,7 @@
 			</tr>
 		</c:forEach>
 	</table>
+	<a href="ManagerHomePage" >Go Back</a>
 	</div>
 </body>
 </html>

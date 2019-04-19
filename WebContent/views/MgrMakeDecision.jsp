@@ -13,8 +13,6 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<a href="ManagerHomePage" >Go Back</a>
-	<p>Approve/Deny Reimbursements</p>
 	<div class="container">
 	<table class="table table-hover">
 		<tr>
@@ -35,6 +33,7 @@
 		</c:forEach>
 	</table>
 	</div>
+	<div class="container">
 	<form action="MgrFinalDecision" method="POST">
 	    <p>Enter Request ID</p>
 	    <input type="text" name="requestId">
@@ -42,5 +41,7 @@
 	    <input type="text" name="mydecision">
 	    <input type="submit" value="Submit">
 	</form>
+	<a href="ManagerHomePage" >Go Back</a>
+	</div>
 </body>
 </html>

@@ -16,23 +16,23 @@
 	<h1>Hello ${man.firstName}</h1>
 		
 		<a href="MgrMakeDecision">Approve/Deny Requests</a>
-		<p>-A Manager can approve/deny pending reimbursement requests</p>
+		<p>Approve or deny pending reimbursement requests</p>
 		
 		<a href="MgrViewPending">View Pending</a>
-		<p>-A Manager can view all pending requests from all employees</p>
+		<p>-View pending requests from all employees</p>
 		
 		<a href="MgrViewResolved">View Resolved</a>
-		<p>-A Manager can view all resolved requests from all employees and see which manager resolved it</p>
+		<p>View resolved requests and deciding manager</p>
 		
-		<a href="MgrViewEmployees">View All Employees</a>
-		<p>-A Manager can view all Employees</p>
+		<a href="MgrViewEmployees">View All</a>
+		<p>View every employees information</p>
 		
-		<p>Enter the employees ID number:</p>
+		
         <form action="MgrViewRequests" method="POST">
 	        <input type="text" name="empID">
 	        <input type="submit" value="Enter">
         </form>
-        <p>-A Manager can view reimbursement requests from a single Employee</p>
+       <p>Enter an employee ID number to view requests from employee:</p>
         
         <a href="LogoutServlet">Logout</a>
 </div>
