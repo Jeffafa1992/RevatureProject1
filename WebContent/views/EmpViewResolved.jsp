@@ -14,6 +14,7 @@
 </head>
 <body>
 	<div class="container">
+	<a href="EmployeeHomePage" >Go Back</a>
 	<table class="table table-hover">
 		<tr>
 			<th>Request Id</th>
@@ -34,6 +35,6 @@
 			</tr>
 		</c:forEach>
 	</table>
-	<a href="EmployeeHomePage" >Go Back</a>
+	
 	</div>
 </body>

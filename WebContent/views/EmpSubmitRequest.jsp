@@ -12,12 +12,15 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
+<div class="container">
+<a href="EmployeeHomePage" >Go Back</a>
 	<p>Enter request details:</p>
 	<form action="EmpPerformSubmit" method="POST"> 
-	    <label>Enter Manager Id: <input type="text" value="" name="manID"></label>
-		<label>Enter Request Amount: <input type="text" value="" name="amount"></label>
-		<input type="submit" value="Submit">
+	    <label>Enter Manager Id: <input type="text" value="" name="manID"></label><br>
+		<label>Enter Request Amount: <input type="text" value="" name="amount"></label><br>
+		<input type="submit" class="btn btn-primary" value="Submit">
 	</form>
-<a href="EmployeeHomePage" >Go Back</a>
+
+</div>
 </body>
 </html>

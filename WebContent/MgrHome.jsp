@@ -30,7 +30,7 @@
 		
         <form action="MgrViewRequests" method="POST">
 	        <input type="text" name="empID">
-	        <input type="submit" value="Enter">
+	        <input type="submit" class="btn btn-primary" value="Enter">
         </form>
        <p>Enter an employee ID number to view requests from employee:</p>
         

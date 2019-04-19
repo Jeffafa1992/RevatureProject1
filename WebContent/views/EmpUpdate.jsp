@@ -12,15 +12,16 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-
+<div class="container">
+<a href="EmployeeHomePage" >Go Back</a>
 <p>Enter the information you would like to change</p>
 <form action="EmpPerformUpdate" method="POST"> 
 	<label>First Name: <input type="text" value="${emp.firstName}" name="fname"></label><br>
 	<label>Last Name: <input type="text" value="${emp.lastName}" name="lname"></label><br>
 	<label>Email: <input type="text" value="${emp.email}" name="email"></label><br>
-	<input type="submit" value="Update">
+	<input type="submit" class="btn btn-primary" value="Update">
 </form>
-<a href="EmployeeHomePage" >Go Back</a>
 
+</div>
 </body>
 </html>

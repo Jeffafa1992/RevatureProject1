@@ -13,12 +13,13 @@
 </head>
 <body>
 <div class="container">
+<a href="EmployeeHomePage" >Go Back</a>
 <p>Employee ID: ${emp.id}</p>
 <p>Employee user name: ${emp.username}</p>
 <p>First Name: ${emp.firstName}</p>
 <p>Last Name: ${emp.lastName}</p>
 <p>Email: ${emp.email}</p>
-<a href="EmployeeHomePage" >Go Back</a>
+
 </div>
 </body>
 </html>

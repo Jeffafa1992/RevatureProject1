@@ -14,6 +14,7 @@
 </head>
 <body>
 	<div class="container">
+	<a href="ManagerHomePage" >Go Back</a>
 	<table class="table table-hover">
 		<tr>
 			<th>Request Id</th>
@@ -37,11 +38,11 @@
 	<form action="MgrFinalDecision" method="POST">
 	    <p>Enter Request ID</p>
 	    <input type="text" name="requestId">
-	    <p>Enter 'approved' or 'denied'</p>
-	    <input type="text" name="mydecision">
-	    <input type="submit" value="Submit">
+	    <p>Enter 'approve' or 'deny'</p>
+	    <input type="text" name="mydecision"><br>
+	    <input type="submit" class="btn btn-primary" value="Submit">
 	</form>
-	<a href="ManagerHomePage" >Go Back</a>
+	
 	</div>
 </body>
 </html>

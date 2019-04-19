@@ -25,7 +25,7 @@ public class MgrFinalDecision extends HttpServlet {
 		String decision = (String)request.getParameter("mydecision");
 		response.setContentType("text/html");  
 	    PrintWriter out = response.getWriter(); 
-		if(decision.equals("approved") || decision.contentEquals("denied"))
+		if(decision.equals("approve") || decision.contentEquals("deny"))
 		{
 		    myDao.makeDecision(id, decision);
 		    RequestDispatcher dispatcher = request.getRequestDispatcher("/MgrHome.jsp");
