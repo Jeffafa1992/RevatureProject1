@@ -18,6 +18,8 @@ public class EmployeeHomePage extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//Employee myemp = (Employee) request.getSession().getAttribute("emp");
+		//request.getSession().setAttribute("emp", myemp);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/EmpHome.jsp");
 		dispatcher.forward(request,response);		
 	}
