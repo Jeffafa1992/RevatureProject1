@@ -19,7 +19,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 	Statement statement = null;
 	ResultSet resultSet = null;
 	
-	public static Employee createUser(String name,String pass){  
+	public Employee createUser(String name,String pass){  
 		Employee employee = new Employee();  
 		try{  
 

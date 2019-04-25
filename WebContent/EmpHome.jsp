@@ -13,7 +13,7 @@
 </head>
 <body>
 <div class="container">
-	<h1>Hello <%=request.getSession().getAttribute("emp") %></h1>
+	<h1>Hello ${emp.firstName}</h1>
 			
 	<a href="EmpSubmitRequest">Submit Request</a>
 	<p>Submit a reimbursement request</p>	
