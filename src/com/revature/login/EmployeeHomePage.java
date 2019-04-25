@@ -8,9 +8,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.revature.dao.EmployeeDAOImpl;
-import com.revature.entity.Employee;
-
 public class EmployeeHomePage extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -18,8 +15,6 @@ public class EmployeeHomePage extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//Employee myemp = (Employee) request.getSession().getAttribute("emp");
-		//request.getSession().setAttribute("emp", myemp);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/EmpHome.jsp");
 		dispatcher.forward(request,response);		
 	}

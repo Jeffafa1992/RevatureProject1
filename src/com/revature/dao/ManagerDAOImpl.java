@@ -68,7 +68,7 @@ public class ManagerDAOImpl implements ManagerDAO {
 			String sql = "update requests set status = 'resolved', decision='"+decision+"' where request_id="+id;  
 			Connection connection = DBConnectionUtil.getConnection();
 			Statement statement = connection.createStatement();		
-			ResultSet resultSet = statement.executeQuery(sql);
+			statement.execute(sql);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

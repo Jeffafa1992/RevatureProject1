@@ -87,7 +87,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
                 "VALUES (" + id +", '" + empid + "', '" +  manid + "', '" +  reqamt + "', '" +  expdate + "', '" +  status + "', '" + decision + "')";  
 			Connection connection = DBConnectionUtil.getConnection();
 			Statement statement = connection.createStatement();
-			ResultSet resultSet = statement.executeQuery(sql);
+			statement.execute(sql);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}	

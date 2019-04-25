@@ -2,7 +2,6 @@ package com.revature.login;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -14,8 +13,8 @@ import com.revature.dao.EmployeeDAOImpl;
 import com.revature.dao.ManagerDAOImpl;
 import com.revature.entity.Employee;
 import com.revature.entity.Manager;
-import com.revature.entity.Request;
 
+//edit for new branch
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
