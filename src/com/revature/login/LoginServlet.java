@@ -14,7 +14,6 @@ import com.revature.dao.ManagerDAOImpl;
 import com.revature.entity.Employee;
 import com.revature.entity.Manager;
 
-//edit for new branch
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
