@@ -20,7 +20,7 @@ public class ManagerDAOImpl implements ManagerDAO {
 	Statement statement = null;
 	ResultSet resultSet = null;
 	
-	public static Manager createUser(String name,String pass){  
+	public Manager createUser(String name,String pass){  
 		Manager manager = new Manager();  
 		try{  
 

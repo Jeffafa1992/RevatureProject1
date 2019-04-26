@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.revature.dao.EmployeeDAO;
 import com.revature.dao.EmployeeDAOImpl;
+import com.revature.dao.ManagerDAO;
 import com.revature.dao.ManagerDAOImpl;
 import com.revature.entity.Employee;
 import com.revature.entity.Manager;
@@ -21,6 +22,7 @@ public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	EmployeeDAO empDao = new EmployeeDAOImpl();
+	ManagerDAO manDao = new ManagerDAOImpl();
     public LoginServlet() {
         super();
     }
@@ -39,7 +41,7 @@ public class LoginServlet extends HttpServlet {
 		        rd.forward(request,response);  
 		    }  
 		    else if(ManagerDAOImpl.validate(n, p)){
-		    	Manager man = ManagerDAOImpl.createUser(n, p);
+		    	Manager man = manDao.createUser(n, p);
 		    	request.getSession().setAttribute("man", man);
 		    	RequestDispatcher rd = request.getRequestDispatcher("ManagerHomePage");  
 		        rd.forward(request,response);  
