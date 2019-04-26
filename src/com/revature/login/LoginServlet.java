@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.revature.dao.EmployeeDAO;
 import com.revature.dao.EmployeeDAOImpl;
 import com.revature.dao.ManagerDAOImpl;
 import com.revature.entity.Employee;
@@ -19,6 +20,7 @@ import com.revature.entity.Request;
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
+	EmployeeDAO empDao = new EmployeeDAOImpl();
     public LoginServlet() {
         super();
     }
@@ -31,7 +33,7 @@ public class LoginServlet extends HttpServlet {
 		    String p = request.getParameter("password");  
 		          
 		    if(EmployeeDAOImpl.validate(n, p)){  
-		    	Employee emp = EmployeeDAOImpl.createUser(n, p);	    	
+		    	Employee emp = empDao.createUser(n, p);	    	
 		    	request.getSession().setAttribute("emp", emp);	
 		        RequestDispatcher rd = request.getRequestDispatcher("EmployeeHomePage");  	       
 		        rd.forward(request,response);  

@@ -23,13 +23,15 @@ public class EmpPerformUpdate extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Employee myEmp = (Employee) request.getSession().getAttribute("emp");
 		int id = myEmp.getId();
+		String username = myEmp.getUsername();
+		String password = myEmp.getPassword();
 		
 		String first = request.getParameter("fname");
 		String last = request.getParameter("lname");
 		String email = request.getParameter("email");
 		
 		empDAO.updateInformation(first, last, email, id);
-		Employee emp = (Employee) request.getSession().getAttribute("emp");
+		Employee emp = empDAO.createUser(username,password);
 		request.getSession().setAttribute("emp",emp);
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/EmpHome.jsp");

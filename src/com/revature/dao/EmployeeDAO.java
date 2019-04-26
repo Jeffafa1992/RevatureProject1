@@ -6,6 +6,8 @@ import com.revature.entity.Employee;
 import com.revature.entity.Request;
 
 public interface EmployeeDAO {	
+	Employee createUser(String name,String pass);
+	
 	//An Employee can submit a reimbursement request
 	void submitRequest(int empid, int manid, int reqamt);
 	
