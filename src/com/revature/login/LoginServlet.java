@@ -26,6 +26,12 @@ public class LoginServlet extends HttpServlet {
     public LoginServlet() {
         super();
     }
+    public static void clearCache(HttpServletResponse response) {  	
+		response.setHeader("Cache-Control","no-cache");
+		response.setHeader("Cache-Control","no-store");
+		response.setHeader("Pragma","no-cache");
+		response.setDateHeader ("Expires", 0);
+    }
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException { 
 		  
 		    response.setContentType("text/html");  
@@ -35,12 +41,14 @@ public class LoginServlet extends HttpServlet {
 		    String p = request.getParameter("password");  
 		          
 		    if(EmployeeDAOImpl.validate(n, p)){  
+		    	clearCache(response);
 		    	Employee emp = empDao.createUser(n, p);	    	
 		    	request.getSession().setAttribute("emp", emp);	
 		        RequestDispatcher rd = request.getRequestDispatcher("EmployeeHomePage");  	       
 		        rd.forward(request,response);  
 		    }  
 		    else if(ManagerDAOImpl.validate(n, p)){
+		    	clearCache(response);
 		    	Manager man = manDao.createUser(n, p);
 		    	request.getSession().setAttribute("man", man);
 		    	RequestDispatcher rd = request.getRequestDispatcher("ManagerHomePage");  
@@ -51,6 +59,7 @@ public class LoginServlet extends HttpServlet {
 		        rd.include(request,response);  
 		        out.print("This username or password is not recognized");  
 		    }  	          
+		    
 		    out.close();  		    
 	}
 

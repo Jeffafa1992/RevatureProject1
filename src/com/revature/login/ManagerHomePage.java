@@ -15,6 +15,10 @@ public class ManagerHomePage extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setHeader("Cache-Control","no-cache");
+		response.setHeader("Cache-Control","no-store");
+		response.setHeader("Pragma","no-cache");
+		response.setDateHeader ("Expires", 0);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/MgrHome.jsp");
 		dispatcher.forward(request,response);
 	}
