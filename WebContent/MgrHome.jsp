@@ -14,6 +14,8 @@
 <body>
 <div class="container">
 	<h1>Hello ${man.firstName}</h1>
+	<h4>Your Id: ${man.id}<br> Your Full Name: ${man.firstName} ${man.lastName}<br> 
+	   Your User Name: ${man.username}<br> Your Email: ${man.email}</h4>
 		
 		<a href="MgrMakeDecision">Approve/Deny Requests</a>
 		<p>Approve or deny pending reimbursement requests</p>

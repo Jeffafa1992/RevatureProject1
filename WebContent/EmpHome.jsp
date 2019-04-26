@@ -14,6 +14,8 @@
 <body>
 <div class="container">
 	<h1>Hello ${emp.firstName}</h1>
+	<h4>Your Id: ${emp.id}<br> Your Full Name: ${emp.firstName} ${emp.lastName}<br> 
+	   Your User Name: ${emp.username}<br> Your Email: ${emp.email}</h4>
 			
 	<a href="EmpSubmitRequest">Submit Request</a>
 	<p>Submit a reimbursement request</p>	
@@ -22,10 +24,7 @@
 	<p>View your pending reimbursement requests</p>	
 	
 	<a href="EmpViewResolved">View Resolved Requests</a>
-	<p>View your resolved reimbursement requests</p>	
-	
-	<a href="EmpViewInformation">View Information</a>
-	<p>View your information</p>	
+	<p>View your resolved reimbursement requests</p>		
 	
 	<a href="EmpUpdateForm">Update Information</a>
 	<p>Update your information</p>
