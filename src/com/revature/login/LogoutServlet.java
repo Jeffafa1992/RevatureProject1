@@ -15,8 +15,9 @@ public class LogoutServlet extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {	
-		request.getRequestDispatcher("index.html").include(request, response);  
+
 		request.getSession().invalidate();
+		request.getRequestDispatcher("index.html").include(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -37,6 +37,7 @@
        <p>Enter an employee ID number to view requests from employee:</p>
         
         <a href="LogoutServlet">Logout</a>
+        
 </div>
 </body>
 </html>

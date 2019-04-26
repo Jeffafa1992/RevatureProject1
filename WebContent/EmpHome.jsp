@@ -30,6 +30,7 @@
 	<p>Update your information</p>
 	
 	<a href="LogoutServlet">Logout</a>
+	
 
 </div>
 </body>
