@@ -16,10 +16,6 @@ public class LogoutServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {	
 
-		response.setHeader("Cache-Control","no-cache");
-		response.setHeader("Cache-Control","no-store");
-		response.setHeader("Pragma","no-cache");
-		response.setDateHeader ("Expires", 0);
 		request.getSession().invalidate();
 		request.getRequestDispatcher("index.html").include(request, response);
 	}

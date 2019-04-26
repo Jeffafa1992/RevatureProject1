@@ -58,7 +58,8 @@ public class LoginServlet extends HttpServlet {
 		        RequestDispatcher rd = request.getRequestDispatcher("index.html");  
 		        rd.include(request,response);  
 		        out.print("This username or password is not recognized");  
-		    }  	          
+		    }  	 
+	
 		    
 		    out.close();  		    
 	}
