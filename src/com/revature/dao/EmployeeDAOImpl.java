@@ -78,7 +78,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 	@Override
 	public void submitRequest(int empid,int manid, int reqamt) {
 		int id = getRequestCount()+1;
-		String expdate = "19-APR-19";
+		String expdate = "26-APR-19";
 		String status = "pending";
 		String decision = "";
 		  
